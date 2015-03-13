@@ -1,0 +1,35 @@
+{
+  "name": "instamapstagram-react",
+  "version": "0.0.1",
+  "description": "instagram on a map",
+  "main": "src/main.jsx",
+  "scripts": {
+    "start": "node_modules/.bin/webpack-dev-server --progress --colors --inline --content-base dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iirvine/instamapstagram-react.git"
+  },
+  "author": "Ian Irvine <iirvine@arubanetworks.com> (https://github.com/iirvine)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iirvine/instamapstagram-react/issues"
+  },
+  "homepage": "https://github.com/iirvine/instamapstagram-react",
+  "dependencies": {
+    "flummox": "^3.0.1",
+    "leaflet": "git+ssh://git@github.com:Leaflet/Leaflet.git",
+    "react": "^0.13.0"
+  },
+  "devDependencies": {
+    "babel-core": "^4.7.12",
+    "babel-loader": "^4.1.0",
+    "css-loader": "^0.9.1",
+    "file-loader": "^0.8.1",
+    "sass-loader": "^0.5.0",
+    "style-loader": "^0.8.3",
+    "url-loader": "^0.5.5",
+    "webpack": "^1.7.3",
+    "webpack-dev-server": "^1.7.0"
+  }
+}
