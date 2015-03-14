@@ -16,6 +16,7 @@ export default React.createClass({
   },
 
   cloneChildWithMap(child) {
+    if (!child) { return null; }
     return cloneElement(child, {map: this.state.map});
   },
 

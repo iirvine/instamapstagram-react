@@ -19,3 +19,11 @@ export function queryLocation({lat, lng}) {
     });
   });
 }
+
+export function isAuthorized() {
+  return instajam.authenticated;
+}
+
+export function getAuthUrl() {
+  return `https://instagram.com/oauth/authorize/?client_id=${INSTAGRAM_CLIENT_ID}&redirect_uri=${INSTAGRAM_REDIRECT_URI}&response_type=token&scope=basic+comments`;
+}
