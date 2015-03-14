@@ -4,7 +4,7 @@ import L from 'leaflet';
 export default React.createClass({
   propTypes: {
     url: React.PropTypes.string.isRequired,
-    map: React.PropTypes.instanceOf(L.map).isRequired
+    map: React.PropTypes.instanceOf(L.Map).isRequired
   },
 
   componentWillMount() {

@@ -1,5 +1,6 @@
-import React from 'react';
+import React from 'react/addons';
 import L from 'leaflet';
+const cloneElement = React.addons.cloneWithProps;
 
 export default React.createClass({
   getInitialState() {
@@ -15,7 +16,7 @@ export default React.createClass({
   },
 
   cloneChildWithMap(child) {
-    return React.cloneElement(child, {map: this.state.map});
+    return cloneElement(child, {map: this.state.map});
   },
 
   render() {
