@@ -12,4 +12,4 @@ let flux = new Flux();
 
 React.withContext(
   {flux},
-  () => React.render(<FluxComponent><App/></FluxComponent>, document.getElementById('app')));
+  () => React.render(<FluxComponent><App center={[40.226194,-111.660796]}/></FluxComponent>, document.getElementById('app')));

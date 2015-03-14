@@ -46,6 +46,11 @@ export default React.createClass({
 
   componentWillMount() {
     this.mediaStore.addListener('change', this.onMediaChange);
+    if (isAuthorized()) {
+      let [lat, lng] = this.props.center;
+      let apiActions = this.props.flux.getActions('media');
+      apiActions.queryLocation({lat, lng});
+    }
   },
 
   onMediaChange() {
@@ -58,7 +63,7 @@ export default React.createClass({
   },
 
   render() {
-    const center = [40.226194,-111.660796];
+    const {center} = this.props;
 
     let images = this.state.media.toArray().map(makeImageMarker);
     let dialog = isAuthorized() ? 
